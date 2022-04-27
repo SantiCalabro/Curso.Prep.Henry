@@ -26,13 +26,12 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
+for (var i=0; i<array.length;i++){
+  array[i]++
+}
 
- // array.forEach((elemento, i)=>{
- //    array[elemento]+1
- // })
+return array
 
- 
-  return array
   
 }
 
@@ -126,6 +125,17 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+  var counter = 1
+  if(arguments.length===0){
+    return 0
+  }else if (arguments.length===1){
+    return arguments[0]
+  } else if (arguments.length>1){
+    for (var i=0; i<arguments.length; i++){
+      counter= counter*arguments[i]
+      }
+  } 
+return counter
 }
 
 
@@ -180,9 +190,9 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  if (n[0]===9){
+  if(n>89 && n<100 || n===9){
     return true
-  } else {
+  } else{
     return false
   }
   
@@ -193,6 +203,7 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí 
+
 
 } 
 
