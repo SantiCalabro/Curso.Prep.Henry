@@ -203,7 +203,15 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí 
-
+for (var i=0; i < arreglo.length ; i++){
+  for (var x=1; x < arreglo.length; x++){
+    if (arreglo[i] === arreglo[x]){
+      return true
+    } else {
+      return false
+    }
+  }
+}
 
 } 
 
@@ -212,21 +220,20 @@ function mesesDelAño(array) {
   //Dado un array que contiene algunos meses del año desordenados, recorrer el array buscando los meses de 
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
-  // Tu código:
-  let meses= []
+  var meses=[]
 
+for (var i=0; i<array.length; i++){
+ 
+  if (array[i]=== "Enero"|| array[i]==="Marzo" || array[i]==="Noviembre"){
+    meses.push(array[i])
+  } 
+}
 
-  let filtro = array.filter((element)=>{
-    if (element === "Enero" && element === "Marzo" && element === "Noviembre"){
-      meses.push(element)
-      return meses
-    } else {
-      return "No se encontraron los meses pedidos"
-    }
-
-  })
-  
-
+if (meses.length != 3){
+  return "No se encontraron los meses pedidos"
+}else {
+  return meses
+}
 
  }
 
@@ -252,19 +259,17 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
-  let array =[]
-  for (var i=0; i<10 ; i++){
-    numero+2
-    array.push(numero)
-    return array
-    if (array.reduce((total, item)=>{
-      return total + item
-    }) == [i]){
-      
-      return "Se interrumpió la ejecución"
+  var array=[]
+  for (var i=0; i<10 ;i++){
+   numero += 2
+   array.push(numero)
+   if(numero === i){
+  
+    return "Se interrumpió la ejecución"
       break
-    }
+   }
   }
+  return array
 }
 
 
@@ -275,6 +280,19 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  var arreglo = []
+  for (var i=0; i<10; i++){
+   
+    if(i === 5){
+      continue
+    }else{
+    numero +=2
+    arreglo.push(numero)
+    }
+   
+   
+  }
+  return arreglo
 }
 
 
